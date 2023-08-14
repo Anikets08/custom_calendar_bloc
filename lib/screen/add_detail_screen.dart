@@ -93,6 +93,8 @@ class _AddDetailScreenState extends State<AddDetailScreen> {
             Padding(
               padding: const EdgeInsets.all(16),
               child: ListView(
+                physics: const BouncingScrollPhysics(),
+                shrinkWrap: false,
                 children: [
                   const SizedBox(
                     height: 23,
@@ -294,7 +296,10 @@ class _AddDetailScreenState extends State<AddDetailScreen> {
                         ),
                       ),
                     ],
-                  )
+                  ),
+                  const SizedBox(
+                    height: 64,
+                  ),
                 ],
               ),
             ),
